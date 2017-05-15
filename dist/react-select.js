@@ -1853,6 +1853,7 @@ var Select = (0, _createReactClass2['default'])({
 	renderMenu: function renderMenu(options, valueArray, focusedOption) {
 		if (options && options.length) {
 			return this.props.menuRenderer({
+				filterValue: this.state.filterValue,
 				focusedOption: focusedOption,
 				focusOption: this.focusOption,
 				instancePrefix: this._instancePrefix,
@@ -2026,7 +2027,7 @@ var Select = (0, _createReactClass2['default'])({
 				this.renderClear(),
 				this.renderArrow()
 			),
-			isOpen ? this.renderOuter(options, !this.props.multi ? valueArray : null, focusedOption) : null
+			isOpen ? this.renderOuter(options, valueArray, focusedOption) : null
 		);
 	}
 
