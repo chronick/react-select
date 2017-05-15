@@ -966,9 +966,9 @@ const Select = createClass({
 	renderMenu (options, valueArray, focusedOption) {
 		if (options && options.length) {
 			return this.props.menuRenderer({
-				filterValue: this.state.filterValue,
 				focusedOption,
 				focusOption: this.focusOption,
+				inputValue: this.state.inputValue,
 				instancePrefix: this._instancePrefix,
 				labelKey: this.props.labelKey,
 				onFocus: this.focusOption,
